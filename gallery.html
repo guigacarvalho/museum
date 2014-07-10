@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Menu Gallery</title>
+        <meta name="description" content="Museum App mockup for the COEN268 discipline at SCU.">
+        <meta name="author" content="Guilherme Barreto Carvalho - 01094282">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/holder.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script>
+      window.onload = function() {
+        var ulelm = document.getElementById('artwork');
+        var styles = ['vine', 'sky', 'lava'];
+          for(var i=0; i<100; i++) {
+  	        var lielm = document.createElement('li');
+            lielm.className = styles[i%3];
+            ulelm.appendChild(lielm);
+          }
+      };
+    </script>
+    </head>
+    <body>
+        <section class="gallery">
+            <ul id='artwork'>
+            </ul>
+        </section>
+        <section class="menu">
+            <ul>
+                <li>Gallery</li>
+                <li>Map</li>
+                <li>Favorites</li>
+                <li>Artwork</li>
+                <li>About</li>                
+                <li>Help</li>                
+                <!-- <li>Exit</li>                 -->
+            </ul>
+        </section>
+
+    </body>
+</html>
