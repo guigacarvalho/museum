@@ -36,7 +36,13 @@
 	font-weight: 100;
 	color: white;
 	pading:5px;
-	font-size: 40px;
+	font-size: 35px;
+    transition: 2s ease;
+    .menuItems {
+        transition: 2s ease;
+        -webkit-transform: translateZ(0);
+        right:-160px;
+    }
 	ul {
 		position: fixed;
 		height: 100%;
@@ -46,6 +52,7 @@
 		right: 0px;
 		padding-top: 5px;
 		background-color: #333333;
+//        opacity: 0.85;
 	}
 	li {
 		position: relative;
@@ -53,6 +60,19 @@
 		padding-right: 10px;
 		float: none;
 	}
+}
+.style-change {
+    opacity: 80%;
+    margin-right: 180px;
+}
+.blur{
+    opacity: 0.4;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+
 }
 ul {
 		list-style: none;
@@ -70,6 +90,10 @@ li {
     position: fixed;
     float: left;
     z-index: 10;
-    top: 350px;
-    right:200px;
+    top: 351px;
+    right: 20px;
+}
+.gallery {
+        transition: 2s ease;
+        -webkit-transform: translateZ(0);
 }
