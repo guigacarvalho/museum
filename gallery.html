@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Menu Gallery</title>
+        <meta name="description" content="Museum App mockup for the COEN268 discipline at SCU.">
+        <meta name="author" content="Guilherme Barreto Carvalho - 01094282">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script src="js/holder.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/animations.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script>
+      window.onload = function() {
+        var ulelm = document.getElementById('artwork');
+        var styles = ['vine', 'sky', 'lava'];
+          for(var i=0; i<100; i++) {
+  	        var lielm = document.createElement('li');
+            lielm.className = styles[i%3];
+            ulelm.appendChild(lielm);
+          }
+      };
+    </script>
+    </head>
+    <body>
+        <section class="gallery">
+            <ul id='artwork'>
+            </ul>
+        </section>
+        <section class="menu">
+            <div id="logo">
+            </div>
+            <div class="blur">
+                </div>
+            <ul class="menuItems">
+                <li><i class="fa fa-building-o"></i> Gallery</li>
+                <li><i class="fa fa-map-marker"></i> Map</li>
+                <li><i class="fa fa-heart-o"></i> Favorites</li>
+                <li><i class="fa fa-picture-o"></i> Artwork</li>
+                <li><i class="fa fa-info-circle"></i> About</li>
+                <li><i class="fa fa-question-circle"></i>  Help</li>
+                <!-- <li>Exit</li>                 -->
+            </ul>
+        </section>
+
+    </body>
+</html>
