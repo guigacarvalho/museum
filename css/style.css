@@ -34,17 +34,16 @@
   color: white;
   pading: 5px;
   font-size: 35px;
-  transition: 2s ease;
+  transition: 0.5s ease;
 }
 .menu .menuItems {
-  transition: 2s ease;
+  transition: 0.5s ease;
   -webkit-transform: translateZ(0);
   right: -160px;
 }
 .menu ul {
   position: fixed;
   height: 100%;
-  padding-left: 10px;
   width: auto;
   top: 0px;
   right: 0px;
@@ -54,8 +53,12 @@
 .menu li {
   position: relative;
   padding-top: 5px;
+  padding-left: 10px;
   padding-right: 10px;
   float: none;
+}
+.menu li.active {
+  background-color: #0e8fdc;
 }
 .style-change {
   opacity: 80%;
@@ -89,6 +92,6 @@ li {
   right: 20px;
 }
 .gallery {
-  transition: 2s ease;
+  transition: 0.5s ease;
   -webkit-transform: translateZ(0);
 }
