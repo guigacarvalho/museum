@@ -11,6 +11,14 @@ html {
   background-origin: border-box;
   font-family: "HelveticaNeue-Light", Arial;
 }
+html #logo {
+  background-image: url("../img/logo.jpg");
+  width: 153px;
+  height: 55px;
+  position: relative;
+  margin-top: 20px;
+  left: 25%;
+}
 html body div.ip-box {
   position: absolute;
   top: 50%;
@@ -19,6 +27,7 @@ html body div.ip-box {
   margin-top: -200px;
   font-size: 20px;
   width: 300px;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 html body div.ip-box input {
   font-size: 20px;
@@ -28,16 +37,16 @@ html body div.ip-box input {
 html body div.ip-box input[type="text"] {
   height: 40px;
   width: 300px;
+  padding-left: 0;
+  padding-right: 0;
   background-color: #ffffff;
-  border: 2px solid transparent;
-  border-radius: 5px;
+  border: 0px solid transparent;
+  border-bottom: 1px solid #999;
 }
 html body div.ip-box ::-webkit-input-placeholder {
   color: #33334C;
 }
 html body div.ip-box input[type="radio"] {
-  height: 25px;
-  width: 25px;
   float: left;
   clear: none;
   margin: 5px 0 0 10px;
@@ -50,7 +59,6 @@ html body div.ip-box input[type="checkbox"] {
   margin-top: 5px;
 }
 html body div.ip-box label {
-  border-radius: 5px;
   margin-left: 20px;
 }
 html body div.ip-box label.radio {
@@ -58,25 +66,20 @@ html body div.ip-box label.radio {
   clear: none;
   display: block;
 }
-html body div.ip-box label.checkbox {
-  margin-top: 40px;
-}
-html body div.ip-box p.gender span:first-child {
-  float: center;
-}
-html body div.ip-box p.gender span:last-child {
-  float: right;
+html body div.ip-box .gender {
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 17%;
 }
 html body div.ip-box p.mailing-list {
-  margin-top: 40px;
-  font-size: 15px;
+  margin-left: 12%;
 }
 html body div.ip-box button.submit {
   height: 40px;
+  font-size: 15px;
   width: 300px;
   background-color: rgba(135, 135, 255, 0.7);
   border: 0px;
-  border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
   font-family: "HelveticaNeue-Light", Arial;

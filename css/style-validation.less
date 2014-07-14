@@ -9,6 +9,17 @@ html {
 	background-size: 100% 100%;
 	background-origin: border-box;
 	font-family: "HelveticaNeue-Light", Arial;
+    #logo {
+        background-image: url("../img/logo.jpg");
+        width: 153px;
+        height: 55px;
+        position: relative;
+//        float:     left;
+//        z-index: 10;
+        margin-top: 20px;
+//        top: ((351-153)/2)px;
+        left: 25%;
+    }
 	body {
 		div {
 			&.ip-box {
@@ -19,6 +30,7 @@ html {
 				margin-top: -200px;
 				font-size: 20px;
 				width: 300px;
+                background-color: rgba(255,255,255,0.95);
 				input {
 					font-size: 20px;
 					color: #000000;
@@ -27,10 +39,13 @@ html {
 				input[type="text"] {
 					height: 40px;
 					width: 300px;
+                    padding-left: 0;
+                    padding-right: 0;
 					background-color: rgba(255,255,255,1);
-					border: 2px solid transparent;
+					border: 0px solid transparent;
 //					box-shadow: 5px 5px 5px #666;
-					border-radius: 5px;
+//					border-radius: 5px;
+                    border-bottom: 1px solid #999;
 					}
 				::-webkit-input-placeholder {
 				  color: #33334C;
@@ -39,8 +54,8 @@ html {
 //					box-shadow: 0px 0px 10px 3pt #8585FF;
 					}
 				input[type="radio"] {
-					height: 25px;
-					width: 25px;
+//					height: 25px;
+//					width: 25px;
 					float:left;
 					clear:none;
 					margin: 5px 0 0 10px;
@@ -56,7 +71,7 @@ html {
 //					background-color: rgba(204,204,204,0.7);
 //					border: 2px solid transparent;
 //					box-shadow: 5px 5px 5px #666;
-					border-radius: 5px;
+//					border-radius: 5px;
 					margin-left: 20px;
 					&.radio {
 						float: left;
@@ -64,30 +79,37 @@ html {
 						display: block;
 						}
 					&.checkbox {
-						margin-top: 40px;
+//						margin-top: 40px;
 						}
 					}
-				p {
-					&.gender {
-						span:first-child {
-							float: center;
-							}
-						span:last-child {
-							float: right;
-							}
-						}
+                .gender {
+//						span:first-child {
+//							float: center;
+//							}
+//						span:last-child {
+//							float: right;
+//							}
+//                    display: inline;
+                    margin-top: 20px;
+                    text-align: center;
+                    margin-left: 17%;
+                    }
+
+                p {
 					&.mailing-list {
-						margin-top: 40px;
-						font-size: 15px;
+//						margin-top: 40px;
+//						font-size: 15px;
+                        margin-left: 12%;
 						}
 					}
 				button {
 					&.submit {
 						height: 40px;
+                        font-size: 15px;
 						width: 300px;
 						background-color: rgba(135,135,255,0.7);
 						border: 0px;
-						border-radius: 5px;
+//						border-radius: 5px;
                         color: #fff;
                         text-transform: uppercase;
                         font-family: "HelveticaNeue-Light", Arial;
