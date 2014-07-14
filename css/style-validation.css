@@ -28,16 +28,12 @@ html body div.ip-box input {
 html body div.ip-box input[type="text"] {
   height: 40px;
   width: 300px;
-  background-color: rgba(204, 204, 204, 0.7);
+  background-color: #ffffff;
   border: 2px solid transparent;
-  box-shadow: 5px 5px 5px #666;
   border-radius: 5px;
 }
 html body div.ip-box ::-webkit-input-placeholder {
   color: #33334C;
-}
-html body div.ip-box input[type="text"]:focus {
-  box-shadow: 0px 0px 10px 3pt #8585FF;
 }
 html body div.ip-box input[type="radio"] {
   height: 25px;
@@ -54,9 +50,6 @@ html body div.ip-box input[type="checkbox"] {
   margin-top: 5px;
 }
 html body div.ip-box label {
-  background-color: rgba(204, 204, 204, 0.7);
-  border: 2px solid transparent;
-  box-shadow: 5px 5px 5px #666;
   border-radius: 5px;
   margin-left: 20px;
 }
@@ -84,4 +77,7 @@ html body div.ip-box button.submit {
   background-color: rgba(135, 135, 255, 0.7);
   border: 0px;
   border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "HelveticaNeue-Light", Arial;
 }
