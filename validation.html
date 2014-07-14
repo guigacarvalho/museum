@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-	
+
 <head>
 	<title>
 		Main
   </title>
-  
+
   <meta charset="utf-8">
   <meta content="width=device-width">
   <link rel="stylesheet" type="text/css" href="css/style-validation.css">
@@ -13,16 +13,16 @@
 
 <body>
 	<div class="ip-box">
+		<input type="text" name="email" placeholder="Email (optional)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
 		<input type="text" name="zip" placeholder="Zip Code" pattern="(\d{5}([\-]\d{4})?)" required><br>
-		<input type="text" name="email" placeholder="Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
 		<input type="text" name="age" placeholder="Age" required><br>
 		<p class="gender">
 			<span>
-				<input type="radio" name="male">
+				<input type="radio" name="gender">
 				<label class="radio" for="male">Male</label>
 			</span>
 			<span>
-				<input type="radio" name="female">
+				<input type="radio" name="gender">
 				<label class="radio" for="female">Female</label>
 			</span>
 		</p><br>
