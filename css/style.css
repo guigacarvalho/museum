@@ -3,6 +3,10 @@
   padding: 0px;
   margin: 0px;
 }
+.fa {
+  width: 40px;
+  text-align: center;
+}
 #artwork {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -39,7 +43,7 @@
 .menu .menuItems {
   transition: 0.5s ease;
   -webkit-transform: translateZ(0);
-  right: -160px;
+  right: -163px;
 }
 .menu ul {
   position: fixed;
@@ -83,13 +87,15 @@ li {
 }
 #logo {
   background-image: url("../img/logo.jpg");
-  width: 153px;
-  height: 55px;
+  width: 54px;
+  height: 54px;
   position: fixed;
+  background-position: 0px -1px;
   float: left;
   z-index: 10;
   top: 351px;
-  right: 20px;
+  right: 0px;
+  -webkit-transform: rotate(-90deg);
 }
 .gallery {
   transition: 0.5s ease;
