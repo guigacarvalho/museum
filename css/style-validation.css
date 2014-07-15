@@ -27,7 +27,7 @@ html body div.ip-box {
   margin-top: -200px;
   font-size: 20px;
   width: 300px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 html body div.ip-box input {
   font-size: 20px;
@@ -78,7 +78,7 @@ html body div.ip-box button.submit {
   height: 40px;
   font-size: 15px;
   width: 300px;
-  background-color: rgba(135, 135, 255, 0.7);
+  background-color: #0e8fdc;
   border: 0px;
   color: #fff;
   text-transform: uppercase;
