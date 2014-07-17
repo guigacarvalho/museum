@@ -36,9 +36,9 @@ html body div.ip-box input {
 }
 html body div.ip-box input[type="text"] {
   height: 40px;
-  width: 300px;
-  padding-left: 0;
-  padding-right: 0;
+  width: 280px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #ffffff;
   border: 0px solid transparent;
   border-bottom: 1px solid #999;
@@ -76,7 +76,7 @@ html body div.ip-box p.mailing-list {
 }
 html body div.ip-box button.submit {
   height: 40px;
-  font-size: 15px;
+  font-size: 20px;
   width: 300px;
   background-color: #0e8fdc;
   border: 0px;
