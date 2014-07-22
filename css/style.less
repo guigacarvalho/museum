@@ -12,8 +12,8 @@
 	#artwork {
 		overflow-x: hidden;
 	    overflow-y: scroll;
-	    width:3000px;
-    	height:800px;
+//	    width:3000px;
+//    	height:800px;
 	}
 		.vine {
 			background-color: #2ba883;
@@ -38,23 +38,26 @@
 	float: right;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
+    width: 217px;
 	color: white;
 	pading:5px;
 	font-size: 35px;
     transition: 0.5s ease;
     .menuItems {
-        transition: 0.5s ease;
+//        transition: 0.5s ease;
         -webkit-transform: translateZ(0);
         right:-163px;
+    }
+    .gray {
+        background-color: rgba(23,23,23,1);
     }
 	ul {
 		position: fixed;
 		height: 100%;
 		width: auto;
+        padding-top: 54px;
 		top: 0px;
 		right: 0px;
-		padding-top: 5px;
-		background-color: #333333;
 //        opacity: 0.85;
 	}
 	li {
@@ -70,18 +73,14 @@
 	}
 }
 .style-change {
-    opacity: 80%;
     margin-right: 180px;
-}
-.blur{
-    opacity: 0.4;
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -o-filter: blur(20px);
-    -ms-filter: blur(20px);
-    filter: blur(20px);
+    -webkit-transform: translateZ(0);
+    background-color: rgba(23,23,23,0.8);
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
 
 }
+
 ul {
 		list-style: none;
 		padding: 0px;
@@ -91,17 +90,57 @@ li {
 	position: relative;
 	float: left;
 }
-#logo {
+.logo {
     background-image: url("../img/logo.jpg");
+    transition: 0.5s ease;
+    background-repeat: no-repeat;
     width: 54px;
     height: 54px;
     position: fixed;
     background-position: 0px -1px;
     float: left;
     z-index: 10;
-    top: 351px;
+    top: 0px;
     right: 0px;
     -webkit-transform: rotate(-90deg);
+    background-color: white;
+}
+.title {
+    top: 0px;
+    right: 17px;
+    background-image: url("../img/logo.jpg");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 54px;
+    position: fixed;
+    background-position: -51px 1px;
+    z-index: 2;
+    background-color: white;
+    padding-right: 23px;
+    padding-left: 40px;
+    background-size: 140px 50px;
+}
+.logo-change {
+    margin-right: 180px;
+    -webkit-animation: rotate 0.5s;
+//    -webkit-animation: resize 0.5s 0.5s;
+//    -webkit-transform: rotate(0deg);
+//    width: 271px;
+//    transition: 0.5s ease;
+    background-color: white;
+}
+@-webkit-keyframes skyblue {
+    0% { border: 1px solid skyblue; }
+    99.99% { border: 1px solid skyblue; }
+    100% { border: 1px solid magenta; }
+}
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(90deg); }
+    100% { -webkit-transform: rotate(-90deg); }
+}
+@-webkit-keyframes resize {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { width: 271px;; }
 }
 .gallery {
         transition: 0.5s ease;
