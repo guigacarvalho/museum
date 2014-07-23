@@ -6,42 +6,82 @@
 		</title>
 		<meta charset="utf-8">
 		<meta name="author" content="Pratyusha Joginipally - 1076585">
-		<!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/styles-fav.css" />
-                <script>
-      window.onload = function() {
-        var ulelm = document.getElementById('artwork');
-        var imgs = ['ex-babbageengine.jpg',
-                        'ex-chess.jpg',
-                        'ex-fellows.jpg',
-                        'ex-internethistory.jpg',
-                        'ex-microprocessors.jpg',
-                        'ex-pdp1.jpg',
-                        'ex-revolution.jpg',
-                        'ex-sellingcomputer.jpg',
-                        'ex-siliconengine.jpg'];
-          for(var i=0; i<imgs.length; i++) {
-  	        var flipper = document.createElement('div');
-              flipper.className = "flip-container";
-              var innerhtml = '<div class="flipper"><div class="front"><h2><img src="img/'+imgs[i%imgs.length]+'" class="front"></h2></div><div class="back"><h2>Back</h2></div></div>';
-              flipper.innerHTML = innerhtml;
-              ulelm.appendChild(flipper);
-          }
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel="stylesheet" type="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+          window.onload = function() {
+            var ulelm = document.getElementById('favorites');
+            var imgs = ['ex-babbageengine.jpg',
+                            'ex-chess.jpg',
+                            'ex-fellows.jpg',
+                            'ex-internethistory.jpg',
+                            'ex-microprocessors.jpg',
+                            'ex-pdp1.jpg',
+                            'ex-revolution.jpg',
+                            'ex-sellingcomputer.jpg',
+                            'ex-siliconengine.jpg'];
+              for(var i=0; i<imgs.length; i++) {
+                var flipper = document.createElement('div');
+                  flipper.className = "flip-container";
+                  var innerhtml = '<div class="flipper"><div class="front"><h2><img src="img/'+imgs[i%imgs.length]+'" class="front"></h2></div><div class="back"><h2>Back</h2></div></div>';
+                  flipper.innerHTML = innerhtml;
+                  ulelm.appendChild(flipper);
+              }
+              
+            //Adding menu
+            var body = document.getElementsByTagName("body");
+
+            var menuElm = document.createElement('section');
+                menuElm.setAttribute("class","menu");
+            var logo = document.createElement("div");
+                logo.setAttribute("class","logo");
+
+            var title = document.createElement("div");
+                title.setAttribute("class","title");
+            var blur = document.createElement("div");
+                blur.setAttribute("class","blur");
+                menuElm.appendChild(logo);
+                menuElm.appendChild(title);
+                menuElm.appendChild(blur);
+
+              var menuItems = {
+                  " Gallery": "fa fa-building-o",
+                  " Map": "fa fa-map-marker",
+                  " Favorites": "fa fa-heart-o",
+                  " Artwork": "fa fa-picture-o",
+                  " About": "fa fa-info-circle",
+                  " Help": "fa fa-question-circle"};
+              var menuUl = document.createElement('ul');
+
+              for(item in menuItems) {
+                var menuItemElm = document.createElement('li');
+                var menuIconElm = document.createElement('i');
+                menuIconElm.className = menuItems[item];
+                menuItemElm.appendChild(menuIconElm);
+                var menuText = document.createTextNode(item);
+                menuItemElm.appendChild(menuText);
+                menuUl.appendChild(menuItemElm);
+              }
+              menuUl.className = "menuItems";
+              menuElm.appendChild(menuUl);
+              body[0].appendChild(menuElm);
+
+              $(".menuItems").toggleClass("gray");
+
+              $(".logo").click(function() {
+                  $(".menuItems").toggleClass("style-change");                 
+                  $(".menuItems").toggleClass("gray");
+                  $(".logo").toggleClass("logo-change");
+            });
       };
     </script>
-		</head>
-	<body>
-		<section class="menu">
-			<ul>
-				<li>Gallery</li>
-				<li>Map</li>
-				<li>Favorites</li>
-				<li>Artwork</li>
-				<li>About</li>
-				<li>Help</li>
-			</ul>
-		</section>
-		<section class="fav-section" id ="artwork">
-		</section>
-	</body>
+<!--        <script src="js/animations.js"></script>-->
+</head>
+<body>
+    <section class="fav-section" id ="favorites">
+    </section>
+</body>
 </html>
