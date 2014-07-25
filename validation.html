@@ -7,7 +7,9 @@
   </title>
 
   <meta charset="utf-8">
-  <meta content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="ScreenOrientation" content="rightHanded">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.75">
   <link rel="stylesheet" type="text/css" href="css/style-validation.css">
 </head>
 
@@ -17,7 +19,7 @@
         </div>
 		<input type="text" name="email" placeholder="Email (optional)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
 		<input type="text" name="zip" placeholder="Zip Code" pattern="(\d{5}([\-]\d{4})?)" required><br>
-		<input type="text" name="age" placeholder="Age" required><br>
+		<input type="text" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" required><br>
 		<div class="gender">
 				<input type="radio" name="gender">
 				<label class="radio" for="male">Male</label>
