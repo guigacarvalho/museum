@@ -1,10 +1,19 @@
     <div class="ip-box">
-        <div id="logo">
-        </div>
-        {{input type="text" value=email placeholder="Email (optional)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"}}<br>
-        {{input type="text" value=zip placeholder="Zip Code"}}
+        {{#if isNotValid}}
+        <span style="color: red;font-size: 15px; padding-left: 20px;margin-top: 20px;">
+        	<strong>Missing zip code and birthday</strong>
+        </span>
+        {{/if}}
+        <br>
+        {{input type="email" valueBinding="email" placeholder="Email (optional)"}}
+        <br> 
+        {{input valueBinding="zip" placeholder="Zip Code"}}
 		<br>
-		{{input type="text" value=dob placeholder="Date of Birth"}}		
+		<label>Birthday</label>
+		<br>
+		{{input type="number" valueBinding="day" placeholder="Day" min="1" max="31" class="day"}}
+		{{input type="number" valueBinding="month" placeholder="Month" min="1" max="12" class="month"}}
+		{{input type="number" valueBinding="year" placeholder="Year" min="1914" max="2014" class="year"}}		
 		<br>
 		<div class="gender">
             <input type="radio" name="gender">
@@ -13,7 +22,7 @@
             <label class="radio" for="female">Female</label>
 		</div>
 		<p class="mailing-list">
-			<input type="checkbox" name="mailing-list">
+			<input type="checkbox" checked="mailing_list">
 			<label class="checkbox" for="mailing-list">Receive Newsletters</label>
 		</p>
 		<button class="submit" type="button"  {{action 'save'}}>Submit</button>

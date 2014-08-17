@@ -206,11 +206,11 @@ div {
         width: 250px;
         background-color: rgba(255,255,255,0.85);
         input {
-            font-size: 20px;
+            font-size: 18px;
             color: #000000;
             margin-top: 20px;
             }
-        input[type="text"] {
+        input[type="email"], input[type="text"]{
             height: 40px;
             width: 230px;
             padding-left: 10px;
@@ -218,6 +218,29 @@ div {
             background-color: rgba(255,255,255,1);
             border: 0px solid transparent;
             border-bottom: 1px solid #999;
+            }
+        input[type="text"] {
+            margin-bottom: 20px;
+        }
+        input[type="number"]{
+            height: 40px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 4px;
+            margin-top: 0px;
+            background-color: rgba(255,255,255,1);
+            border: 0px solid transparent;
+            border-bottom: 1px solid #999;
+            content: "Date";
+            &.day {
+                 width: 50px;
+            }
+            &.month {
+                 width: 80px;
+            }
+            &.year {
+                 width: 60px;
+            }
             }
         ::-webkit-input-placeholder {
           color: #33334C;
