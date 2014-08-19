@@ -4,3 +4,5 @@ tmp/
 app/controllers/registration.js
 
 app/styles/app.css
+
+node_modules.zip
