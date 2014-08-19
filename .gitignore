@@ -1,2 +1,6 @@
 node_modules/
 tmp/
+
+app/controllers/registration.js
+
+app/styles/app.css
