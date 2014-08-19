@@ -227,7 +227,6 @@ div.ip-box input[type="number"] {
   background-color: #ffffff;
   border: 0px solid transparent;
   border-bottom: 1px solid #999;
-  content: "Date";
 }
 div.ip-box input[type="number"].day {
   width: 50px;
@@ -256,6 +255,15 @@ div.ip-box label {
 div.ip-box .gender {
   margin-top: 20px;
   text-align: center;
+  height: 40px;
+  width: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ffffff;
+  font-size: 18px;
+  color: #000000;
+  border: 0px solid transparent;
+  border-bottom: 1px solid #999;
 }
 div.ip-box p {
   margin-top: 20px;
@@ -263,6 +271,18 @@ div.ip-box p {
 }
 div.ip-box p.mailing-list {
   text-align: center;
+}
+div.ip-box p.login_message {
+  text-align: center;
+  color: #0e8fdc;
+  font-style: italic;
+  font-size: 30px;
+}
+div.ip-box p.para {
+  font-size: 15px;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 div.ip-box button.submit {
   height: 40px;
