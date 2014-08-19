@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+var RegistrationController = Ember.Controller.extend({
 	isNotValid: false,
 	actions:{
 		save: function () {
@@ -10,9 +10,6 @@ export default Ember.Controller.extend({
 				month = this.get('month'),
 				year = this.get('year'),
 				mailing_list = this.get('mailing_list');
-			if ( zip && day && month && year ) {
-				this.set('isNotValid' , false);
-				console.log('inside if');
 				var visitor = this.store.createRecord('registration', {
 					zip: zip,
 					email: email,
@@ -28,13 +25,23 @@ export default Ember.Controller.extend({
 						controller.set('zip', '');
 						controller.set('day', '');
 						controller.set('month', '');
-						controller.set('year', '');						
-					// controller.addObject(visitor);
+						controller.set('year', '');
 					}
 				);
-			} else {
-				this.set('isNotValid' , true);
-			}
 		}
 	}
 });
+
+RegistrationController.reopen({
+  validations: {
+    email: {
+      presence: true,
+      length: { minimum: 5 }
+    },
+    zip: {
+      numericality: true
+    }
+  }
+});
+
+export default RegistrationController;

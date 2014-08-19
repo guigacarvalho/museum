@@ -6,13 +6,13 @@ var Gallery = DS.Model.extend({
 	desc: DS.attr('string')
 });
 
- Gallery.reopenClass({
-        //include
+//  Gallery.reopenClass({
+//         //include
 
-    FIXTURES: [
+//     FIXTURES: [
         
-    ]
-});
+//     ]
+// });
 
 
 export default Gallery;

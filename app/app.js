@@ -8,6 +8,9 @@ var App = Ember.Application.extend({
   modulePrefix: 'my-new-app', // TODO: loaded via config
   Resolver: Resolver
 });
+App.MarkerCollectionLayer =
+  EmberLeaflet.MarkerCollectionLayer.extend({
+    contentBinding: 'controller'});
 
 loadInitializers(App, 'my-new-app');
 

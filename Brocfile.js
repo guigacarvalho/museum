@@ -24,5 +24,8 @@ var app = new EmberApp();
 // });
 
 // module.exports = mergeTrees([app.toTree(), fontTree]);
+app.import('vendor/leaflet-dist/leaflet-src.js')
+app.import('vendor/leaflet-dist/leaflet.css')
+app.import('vendor/ember-leaflet/dist/ember-leaflet.js')
 
 module.exports = app.toTree();

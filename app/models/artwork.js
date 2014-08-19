@@ -9,12 +9,12 @@ var Artwork = DS.Model.extend({
 	source: DS.attr('string')
 });
 
-     Artwork.reopenClass({
-     	//include
+//      Artwork.reopenClass({
+//      	//include
 
-	FIXTURES: [
+// 	FIXTURES: [
 
-    ]
-});
+//     ]
+// });
 
 export default Artwork;
