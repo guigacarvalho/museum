@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('registration');
   this.route('map');
   this.route('about');
-  this.route('favorites');
+  this.route('favorite');
   this.route('help');
 });
 
