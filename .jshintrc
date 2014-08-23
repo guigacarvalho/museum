@@ -5,8 +5,7 @@
     "MyNewAppENV": true,
     "L": true,
     "EmberLeaflet": true,
-    "Firebase": true,
-    "App": true
+    "Firebase": true
   },
   "browser" : true,
   "boss" : true,

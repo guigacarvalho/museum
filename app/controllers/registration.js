@@ -1,60 +1,20 @@
 import Ember from 'ember';
 
-var RegistrationController = Ember.ArrayController.extend(Ember.Validations.Mixin , {
-	gender: ["Gender","male","female"],
-	selectedGender: "Gender",
-	newsletter: true,
-	needs: ['application'],
-	loggedout: Ember.computed.alias('controllers.application.is_loggedout'),
+var RegistrationController = Ember.Controller.extend({
 	isNotValid: false,
-	validations: {
-    	zip: {
-    		//presence: true,
-    		//presence: { message: 'must not be blank' },
-    		length: { is: 5 },
-    		numericality: 'onlyInteger' 
-    	}
-	},
-	validation: function () {
-		var that = this,
-			valid;
-		this.validate().then(null, function() {
-			valid = that.get('isValid');
-			console.log('in here: ' + that.get('isValid'));
-			console.log(that.get('errors.zip'));
-			return valid;
-		});
-		
-	},
 	actions:{
 		save: function () {
-			//debugger;
 			var email = this.get('email'),
 				zip = this.get('zip'),
 				day = this.get('day'),
 				month = this.get('month'),
 				year = this.get('year'),
-				gender = this.get('selectedGender'),
-				newsletter = this.get('newsletter');
-			
-
-			var call = this.validation();
-			console.log(call);
-			// if(zip.match("^\\d{5}$")){
-			// 	console.log('match found');
-			// } else {
-			// 	console.log('match not found');
-			// }
-			if ( zip && day && month && year ) {
-				this.set('isNotValid' , false);
-				this.set('loggedout', false);
-				console.log(this.get('selectedGender') + newsletter);
+				mailing_list = this.get('mailing_list');
 				var visitor = this.store.createRecord('registration', {
 					zip: zip,
 					email: email,
 					dob: day + '/' + month + '/' + year,
-					gender: gender,
-					newsletter: newsletter
+					mailing_list: mailing_list
 				});
 				var controller = this;
 				visitor.save().then(
@@ -66,24 +26,22 @@ var RegistrationController = Ember.ArrayController.extend(Ember.Validations.Mixi
 						controller.set('day', '');
 						controller.set('month', '');
 						controller.set('year', '');
-						controller.set('gender', '');
-						controller.set('newsletter', '');						
-					// controller.addObject(visitor);
 					}
 				);
-			} else {
-				this.set('loggedout', true);
-				this.set('isNotValid' , true);
-			}
-		},
-		logout: function () {
-			this.set('loggedout', true);
-			this.set('isNotValid' , false);
-			//this.set('selectedGender','Gender');
-			this.set('newsletter', true);
 		}
 	}
 });
 
+RegistrationController.reopen({
+  validations: {
+    email: {
+      presence: true,
+      length: { minimum: 5 }
+    },
+    zip: {
+      numericality: true
+    }
+  }
+});
 
 export default RegistrationController;

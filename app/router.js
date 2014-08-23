@@ -6,16 +6,11 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('gallery');
-<<<<<<< HEAD
   this.route('artwork');
-  this.route('registration', {path: '/'});
-=======
-  this.resource('artwork', {'path' : '/gallery/:galleryId'});
   this.route('registration');
->>>>>>> FETCH_HEAD
   this.route('map');
   this.route('about');
-  this.route('favorite');
+  this.route('favorites');
   this.route('help');
 });
 

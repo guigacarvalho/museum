@@ -8,8 +8,9 @@ var App = Ember.Application.extend({
   modulePrefix: 'my-new-app', // TODO: loaded via config
   Resolver: Resolver
 });
-
-L.Icon.Default.imagePath = '/assets/img';
+App.MarkerCollectionLayer =
+  EmberLeaflet.MarkerCollectionLayer.extend({
+    contentBinding: 'controller'});
 
 loadInitializers(App, 'my-new-app');
 

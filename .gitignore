@@ -6,27 +6,3 @@ app/controllers/registration.js
 app/styles/app.css
 
 node_modules.zip
-
-<<<<<<< HEAD
-.idea/workspace.xml
-
-.idea/vcs.xml
-
-.idea/museum.iml
-
-.idea/libraries/museum_node_modules.xml
-
-.idea/jsLibraryMappings.xml
-
-.idea/misc.xml
-=======
-dist/assets/my-new-app.js
-
-dist/assets/my-new-app.js
-
-dist/assets/my-new-app.js
->>>>>>> FETCH_HEAD
-
-app/routes/artwork.js
-
-app/router.js
