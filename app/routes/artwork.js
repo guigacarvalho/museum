@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
- model: function() {
+ model: function(param) {
 //      var art = this.store.createRecord('artwork', {
 // 		 id: 1,
 // 		 galleryid: 1,
@@ -61,8 +61,7 @@ export default Ember.Route.extend({
 // });
 
 
-
-     return this.store.find('artwork');
- } 
+     return this.store.find('artwork', param.galleryId);
+ 	}
 });
 

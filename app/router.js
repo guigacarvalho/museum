@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('gallery');
-  this.route('artwork');
+  this.resource('artwork', {'path' : '/gallery/:galleryId'});
   this.route('registration');
   this.route('map');
   this.route('about');

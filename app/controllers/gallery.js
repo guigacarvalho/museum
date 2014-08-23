@@ -36,7 +36,6 @@ export default Ember.ArrayController.extend({
 			var store = this.store;
 			var galleryChild = this.get('content').objectAt(id-1); //.content[id-1];
 			//debugger;
-			//console.log(galleryChild.get('title'));
 			
 			var favorite = store.createRecord('favorite');
 			 favorite.get('gallery').then(function(gal){
