@@ -30,5 +30,23 @@ export default Ember.ArrayController.extend({
 			// 					"&tl=en&total=1&idx=0&textlen="+
 			// 					audioStrings[i].length +"&prev=input";
 			// 		}
+	},
+	actions: {
+		addFavorites: function(id){
+			var store = this.store;
+			var galleryChild = this.get('content').objectAt(id-1); //.content[id-1];
+			//debugger;
+			
+			var favorite = store.createRecord('favorite');
+			 favorite.get('gallery').then(function(gal){
+				 gal.pushObject(galleryChild);
+			 });
+
+			favorite.save().then(function(){
+				console.log("Record saved in database");
+			});	
+			
+			
+		}
 	}
 });
