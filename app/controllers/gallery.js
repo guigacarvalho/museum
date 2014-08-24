@@ -20,15 +20,23 @@ export default Ember.ArrayController.extend({
 			 
   		 });
 		audioFile.play();
-
-			// var audioStrings = [];
-			// if (gal.get('desc').length>100)
-			// 	for(var i=0; i<gal.get('desc').length/100; i++) {
-			// 		audioStrings.push(gal.get('desc').slice(i*100,(i+1)*100));
-			// 		var newAudio = "http://translate.google.com/translate_tts?ie=UTF-8&q="+
-			// 					audioStrings[i] +
-			// 					"&tl=en&total=1&idx=0&textlen="+
-			// 					audioStrings[i].length +"&prev=input";
-			// 		}
+	},
+	actions: {
+		addFavorites: function(id){
+				var store = this.store;
+				var galleryChild = this.get('content').objectAt(id-1); //.content[id-1];
+				//debugger;
+				//console.log(galleryChild.get('title'));
+				
+				var favorite = store.createRecord('favorite');
+				 favorite.get('gallery').then(function(gal){
+					 gal.pushObject(galleryChild);
+				 });
+			
+			
+				favorite.save().then(function(){
+					console.log("Record saved in database");
+				});	
+			}
 	}
 });
