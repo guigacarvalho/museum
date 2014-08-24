@@ -12,6 +12,8 @@ App.MarkerCollectionLayer =
   EmberLeaflet.MarkerCollectionLayer.extend({
     contentBinding: 'controller'});
 
+L.Icon.Default.imagePath = '/assets/img';
+
 loadInitializers(App, 'my-new-app');
 
 export default App;
