@@ -90,7 +90,7 @@ li, [data-ember-action] {
   position: absolute;
   width: 100%;
   background-color: #fff;
-  height: 100%;
+  // height: 100%;
   padding-top: 55px;
   margin-right: 54px;
 }
@@ -246,36 +246,25 @@ div {
             color: #000000;
             margin-top: 20px;
             }
-        input[type="email"], input[type="text"]{
+        input[type="email"],input[type="date"], input[type="text"]{
             height: 40px;
             width: 230px;
             padding-left: 10px;
             padding-right: 10px;
             background-color: rgba(255,255,255,1);
             border: 0px solid transparent;
+            &::-webkit-input-placeholder { 
+                        color: #000000;
+            }
+
             border-bottom: 1px solid #999;
-            }
-        input[type="text"] {
-            margin-bottom: 20px;
-        }
-        input[type="number"]{
-            height: 40px;
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-left: 4px;
-            margin-top: 0px;
-            background-color: rgba(255,255,255,1);
-            border: 0px solid transparent;
-            border-bottom: 1px solid #999;
-            &.day {
-                 width: 50px;
-            }
-            &.month {
-                 width: 80px;
-            }
-            &.year {
-                 width: 60px;
-            }
+            &.fColor {
+                    color: red;
+                    &::-webkit-input-placeholder { 
+                        color: red;
+                    }
+                }
+            
             }
         ::-webkit-input-placeholder {
           color: #33334C;
@@ -318,7 +307,23 @@ div {
             border-bottom: 1px solid #999;
             // margin-left: 17%;
             }
-
+        .genderfColor {
+            margin-top: 20px;
+            text-align: center;
+            height: 40px;
+            width: 250px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(255,255,255,1);
+            font-size: 18px;
+            color: red;
+            border: 0px solid transparent;
+            border-bottom: 1px solid #999;
+            // margin-left: 17%;
+            &::-webkit-input-placeholder { 
+                        color: red;
+                    }
+            }    
         p {
             margin-top: 20px;
             margin-bottom: 20px;
