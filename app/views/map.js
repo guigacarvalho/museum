@@ -1,3 +1,6 @@
+import Ember from 'ember';
+
+
 export default EmberLeaflet.MapView.extend({
 	 	childLayers: [
 		  EmberLeaflet.TileLayer.extend({
@@ -8,7 +11,16 @@ export default EmberLeaflet.MapView.extend({
 		  	contentBinding: 'controller',
 		  	itemLayerClass: EmberLeaflet.MarkerLayer.extend(
 		  		EmberLeaflet.PopupMixin, {
-					  popupContentBinding: 'content.title'
+		  			popupContentBinding: 'content.title'
+					  // popupContentBinding: 
+					  // popupContent: function() {
+					  // 	// debugger;
+					  //   var view = this.view = this._parentLayer.createChildView('map-popup');
+					  //   view.set('context', this.get('content'));
+					  //   Ember.View.states.inDOM.enter(view);
+					  //   view.createElement();
+					  //   return view;
+					  // }.property()
 					}
 			    )
 			  })

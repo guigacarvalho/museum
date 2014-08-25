@@ -1,7 +1,9 @@
-<div class="gallery">
+<div class="artwork">
+	
  {{#each}}
- 
+ <p class="gallerytitle">{{galleryTitle}}</p>
  <div class='card'>
+	 
  	<h2>{{title}} <i class="fa fa-play-circle-o" {{action 'play' this}}></i></h2>
  	<img {{bind-attr src='img'}}>
 	<div class='stats'>
