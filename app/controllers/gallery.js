@@ -10,13 +10,11 @@ export default Ember.ArrayController.extend({
 
 		var audioFile = new Audio(audio);
   		 audioFile.addEventListener('ended', function() {
-  		 	var audio1 = "http://translate.google.com/translate_tts?ie=UTF-8&q=test&tl=en";
-					// }gal.get('desc').slice(0,100)
-
+  		 	var audio1 = "http://translate.google.com/translate_tts?ie=UTF-8&q="+gal.get('desc').slice(0,100)+"&tl=en";
 			 var audioFile1 = new Audio(audio1);
 				audioFile1.play();
-				alert("test");
-				console.log("testing");
+				// alert("test");
+				// console.log("testing");
 			 
   		 });
 		audioFile.play();
