@@ -5,7 +5,10 @@ var Gallery = DS.Model.extend({
     img: DS.attr('string'),
     lng: DS.attr('number'),
     lat: DS.attr('number'),
-	desc: DS.attr('string')
+	desc: DS.attr('string'),
+	favoriteCount: DS.attr('number'),
+	aboveOneLikes: DS.attr('boolean')
+
 });
 
 export default Gallery;

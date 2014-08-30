@@ -8,11 +8,13 @@
  	<img {{bind-attr src='img'}}>
  	{{desc}}
 	<div class='stats'>
-	 	3 visits 15 likes 3 comments
+	{{#if favoriteCount}}
+	 	 {{favoriteCount}} like{{#if aboveOneLikes}}s{{/if}}
+ 	 {{/if}}
  	</div>
 	<div class='comments'>
 		<div class='buttons'>
-			<i class="fa fa-thumbs-o-up"></i> like <i class="fa fa-comments-o"></i> comment
+			<button {{action 'addFavorites' id}}><i class="fa fa-thumbs-o-up"></i>like</button> 
 		</div>	
 	</div>	
 </div>

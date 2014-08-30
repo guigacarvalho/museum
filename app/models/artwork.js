@@ -8,7 +8,10 @@ var Artwork = DS.Model.extend({
 	galleryTitle: DS.attr('string'),
 	date: DS.attr('date'),
 	copyrightOwner: DS.attr('string'),
-	source: DS.attr('string')
+	source: DS.attr('string'),
+	favoriteCount: DS.attr('number'),
+	aboveOneLikes: DS.attr('boolean')
+
 });
 
 export default Artwork;

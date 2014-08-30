@@ -1,7 +1,12 @@
 <div class="favorite">
-		 <p class="gallerytitle">Favorites</p>
+<p class="gallerytitle">Favorites</p>
 
-{{#each}}
- <p> - Favorite {{id}}</p>
-{{/each}}
+ {{#each model}}
+ <div class='card'>
+<h2>{{title}} </h2>
+ 	<img {{bind-attr src='img'}}> 
+	{{desc}}
+</div>
+
+ {{/each}}
 </div>

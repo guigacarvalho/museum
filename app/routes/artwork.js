@@ -15,6 +15,9 @@ export default Ember.Route.extend({
 			return art;
 		});
 	  
- 	}
- 
+ 	},
+ setupController: function(controller, model){
+	 controller.set('content', model);
+	 //this.controllerFor('favorite').set('model', this.store.find('favorite'));
+ } 
 });

@@ -20,21 +20,25 @@ export default Ember.ArrayController.extend({
 		audioFile.play();
 	},
 	actions: {
-		addFavorites: function(id){
+		addFavorites: function(galleryid){
 				var store = this.store;
-				var galleryChild = this.get('content').objectAt(id-1); //.content[id-1];
-				//debugger;
-				//console.log(galleryChild.get('title'));
+				var self = this;
+				return store.find('gallery').then(function(galleries){
+					var favs = galleries.filterBy('id', galleryid);
+					if(favs.length == 1) {
+						var fav = favs[0];
+						fav.set('favoriteCount', fav.get('favoriteCount')+1);
+						if(fav.get('favoriteCount')>1)
+							fav.set('aboveOneLikes', true);
+						else
+							fav.set('aboveOneLikes', false);
+						fav.save().then(function(){
+	  						console.log("Record saved in database");
+	  					});
+					}
+				});
 				
-				var favorite = store.createRecord('favorite');
-				 favorite.get('gallery').then(function(gal){
-					 gal.pushObject(galleryChild);
-				 });
-			
-			
-				favorite.save().then(function(){
-					console.log("Record saved in database");
-				});	
 			}
+
 	}
 });
